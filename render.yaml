@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jobsphere-api
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        value: mongodb+srv://username:password@cluster.mongodb.net/jobportal?retryWrites=true&w=majority
